@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <table class="table table-hover">
+        <tr>
+            <th>Course Code</th>
+            <th>Average Score</th>
+            <th> Total Students</th>
+            <th> Passing Students</th>
+        </tr>
+
+        {% for each in course_details %}
+            <tr>
+                <td>{{ each[0] }}</td>
+                
+                <td>{{ each[1]|round(2) }}</td>
+                
+                <td>{{ each[2] }}</td>
+                
+                <td>{{ each[3] }}</td>
+            </tr>
+
+
+        {%  endfor %}
+    </table>
+
+
+
+
+
+
+
+{% endblock %}

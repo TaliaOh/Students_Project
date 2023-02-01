@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>StudentID</th>
+            <th>Course Code</th>
+            <th>Score</th>
+
+        </tr>
+
+        {% for each_tuple in mylist %} 
+            <tr>
+                {% for each_element in each_tuple %}
+                    <td>{{ each_element }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
